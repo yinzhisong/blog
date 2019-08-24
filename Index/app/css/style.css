@@ -4,23 +4,122 @@
     border: none;
     outline: none;
     background-color: transparent;
-}
-.demo1 {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    background-color: red;
-}
-button {
-    margin-top: 15px;
-    width: 50px;
-    height: 30px;
-    border: 1px solid #333;
     
+    /* 清除手机端点击时的阴影 */
+    -webkit-tap-highlight-color: transparent;
 
     /* 清除手机端, 圆角 */
     -webkit-appearance:none;
+    vertical-align: baseline;
+}
+ul li {list-style: none;}
+img , video{
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease-in-out, background-color 0.2s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+body {
+    font-family: Ovo, Georgia, STZhongsong, "Microsoft YaHei", serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #555;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-    /* 清除手机端点击时的阴影 */
-    -webkit-tap-highlight-color: transparent;
+/* header */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-attachment: fixed;
+}
+header .mask {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+header .h-header {
+    height: 10rem;
+    font-size: 1.4rem;
+    line-height: 3;
+}
+header .h-header-logo {
+    float: left;
+    padding-left: 1rem;
+}
+header .h-header-logo a{
+    color: rgb(255, 255, 255);
+}
+header .h-header-logo img{
+    max-width: 10rem;
+    max-height: 10rem;
+}
+header .h-header-nav{
+    float: right;
+    padding-right: 1rem;
+}
+header .h-header-nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+header .h-header-nav ul li a{
+    color: #fff;
+}
+header .h-header-nav ul li a:hover {
+    color: #b8860b;
+}
+header .h-header-nav ul li a.active {
+    border-bottom: 1px dotted #e0e0e0;
+    color: #b8860b;
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 2px;
+}
+header .h-header-body {
+    text-align: center;
+    width: 100%;
+}
+header .h-header-body .motto {
+    font-size: 1.4rem;
+    line-height: 2;
+    text-align: center;
+    width: 60%;
+    margin: 8rem auto;
+    color: #fff;
+}
+header .h-header-footer {
+    width: 100%;
+    text-align: center;
+}
+header .h-header-footer-date{
+    font-size: 1.6rem;
+    color: #fff;
+    position: absolute;
+    bottom: 5px;
+    right: 1rem;
+    writing-mode: tb-rl;
+}
+header .h-header-footer-goFooter {
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -17.5px;
+    bottom: 6px;
+}
+header .h-header-footer-goFooter i{
+    font-size: 1.6rem;
 }

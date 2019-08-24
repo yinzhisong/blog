@@ -9,9 +9,14 @@ import "./css/style.css";
 // import Hello from "./Hello";
 
 //import Home from "./containers/Home";
-// let Home = loadable(()=>import('./containers/Home'));
-// let About = loadable(()=>import('./containers/About'));
-let Init = loadable(() => import("./containers/Init"));
+//let Init = loadable(() => import("./containers/Init"));
+
+let Home = loadable(()=>import('./containers/Home'));
+let About = loadable(()=>import('./containers/About'));
+let Tags = loadable(()=>import('./containers/Tags'));
+let Archives = loadable(()=>import('./containers/Archives'));
+let Album = loadable(()=>import('./containers/Album'));
+let Categories = loadable(()=>import('./containers/Categories'));
 
 class App extends Component {
     constructor (...args){
@@ -23,7 +28,12 @@ class App extends Component {
         //let Cmp1=loadable(()=>import('./components/cmp1'));
         return (
             <div>
-                <Route path="/" exact component={Init}></Route>
+                <Route path="/" exact component={Home}></Route>
+                <Route path="/archives" exact component={Archives}></Route>
+                <Route path="/categories" exact component={Categories}></Route>
+                <Route path="/tags" exact component={Tags}></Route>
+                <Route path="/about" exact component={About}></Route>
+                <Route path="/album" exact component={Album}></Route>                
             </div>
         );
     }
