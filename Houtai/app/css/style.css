@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.demo1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+}
+button {
+    margin-top: 15px;
+    width: 50px;
+    height: 30px;
+    border: 1px solid #333;
+    
+
+    /* 清除手机端, 圆角 */
+    -webkit-appearance:none;
+
+    /* 清除手机端点击时的阴影 */
+    -webkit-tap-highlight-color: transparent;
+}
