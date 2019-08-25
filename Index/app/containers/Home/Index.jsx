@@ -1,5 +1,7 @@
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Main from "@/containers/Home/Main";
 import PureRenderMixin from "react-addons-pure-render-mixin";
 
 class Index extends Component {
@@ -13,10 +15,11 @@ class Index extends Component {
     }
     render (){
         return (
-            <header>
-                <Header />
-                首页
-            </header>
+            <Fragment>
+                <Header url="/" />
+                <Main />
+                <Footer />
+            </Fragment>
         );
     }
 }

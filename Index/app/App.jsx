@@ -27,14 +27,14 @@ class App extends Component {
         // 实现按需加载
         //let Cmp1=loadable(()=>import('./components/cmp1'));
         return (
-            <div>
+            <Fragment>
                 <Route path="/" exact component={Home}></Route>
                 <Route path="/archives" exact component={Archives}></Route>
                 <Route path="/categories" exact component={Categories}></Route>
                 <Route path="/tags" exact component={Tags}></Route>
                 <Route path="/about" exact component={About}></Route>
                 <Route path="/album" exact component={Album}></Route>                
-            </div>
+            </Fragment>
         );
     }
 }

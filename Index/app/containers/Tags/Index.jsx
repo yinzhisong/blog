@@ -14,7 +14,7 @@ class Index extends Component {
     render (){
         return (
             <header>
-                <Header />
+                <Header url="/tags" />
                 标签
             </header>
         );

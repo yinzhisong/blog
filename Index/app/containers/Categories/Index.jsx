@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 import Header from "@/components/Header";
 import PureRenderMixin from "react-addons-pure-render-mixin";
 
@@ -13,10 +13,10 @@ class Index extends Component {
     }
     render (){
         return (
-            <header>
-                <Header />
+            <Fragment>
+                <Header url="/categories" />
                 分类
-            </header>
+            </Fragment>
         );
     }
 }

@@ -15,7 +15,6 @@ class Header extends Component {
             }
         }
     }
-    
     componentWillMount (){
         let date = getDate("YMD");
         this.setState({
@@ -24,12 +23,11 @@ class Header extends Component {
         });
     }
     componentDidMount (){
-        console.log(window.location.href);
     }
     render (){
         let {date} = this.state;
         return (
-            <header className="" style={{backgroundImage: `url(../../images/7.jpg)`}}>
+            <header className="" style={{backgroundImage: `url(../../images/7.jpg)`,}}>
                 <div className="mask">
                     <div className="h-header">
                         <div className="h-header-logo">
@@ -39,12 +37,12 @@ class Header extends Component {
                         </div>
                         <div className="h-header-nav">
                             <ul>
-                                <li><Link to="/" className="active">首页</Link></li>
-                                <li><Link to="/archives">归档</Link></li>
-                                <li><Link to="/categories">分类</Link></li>
-                                <li><Link to="/tags">标签</Link></li>
-                                <li><Link to="/about">关于</Link></li>
-                                <li><Link to="/album">相册</Link></li>
+                                <li><Link to="/" className={this.props.url == "/" ? "active":""}>首页</Link></li>
+                                <li><Link to="/archives" className={this.props.url == "/archives" ? "active":""}>归档</Link></li>
+                                <li><Link to="/categories" className={this.props.url == "/categories" ? "active":""}>分类</Link></li>
+                                <li><Link to="/tags" className={this.props.url == "/tags" ? "active":""}>标签</Link></li>
+                                <li><Link to="/about" className={this.props.url == "/about" ? "active":""}>关于</Link></li>
+                                <li><Link to="/album" className={this.props.url == "/album" ? "active":""}>相册</Link></li>
                                 <li><a href="javascript:;">搜索</a></li>
                             </ul>
                         </div>
